@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Su dung vong lap long nhau</title>
+</head>
+<body>
+<script>
+    // let sout;
+    // sout = "<table border='4' width='300' cellspacing='2' cellpadding='5'>"
+    // for (i = 1; i <= 10; i++) {
+    //     sout = sout + "<tr>";
+    //     for (j = 1; j <= 10; j++) {
+    //         sout = sout + "<td>" + i * j + "</td>";
+    //     }
+    //     sout = sout + "</tr>";
+    // }
+    // sout = sout + "</table>";
+    // document.write(sout);
+    let tab,i, j;
+    tab = "<table border='4' width='300' cellspacing='2' cellpadding='5'>";
+    i=j=1;
+    while (i<=10) {
+        tab += "<tr>";
+        while (j<=10) {
+            tab += "<td>" + i * j + "</td>";
+            j++;
+        }
+        tab += "</tr>";
+        j = 1;
+        i++;
+    }
+    tab += "</table>";
+    document.write(tab);
+</script>
+</body>
+</html>

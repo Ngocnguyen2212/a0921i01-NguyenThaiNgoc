@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Array Sum</title>
+</head>
+<body>
+<p>Moi ban nhap tong so gia tri trong mang</p>
+<input type="text" id="totalNum_input"/>
+<input type="button" id="btn_ok" value="OK" onclick="thongBao();"/>
+<br/><br/>
+<p>Nhap cac gia tri trong mang</p><br/>
+<input type="text" id="num_input"/>
+<input type="button" id="btn_add" value="Add" onclick="add_element_to_array();"/>
+<input type="button" id="btn_display" value="Display" onclick="display_element();"/>
+<input type="button" id="btn_sum" value="Sum" onclick="sum_element();"/>
+<div id="result"></div>
+<div id="result2"></div>
+<script>
+    function thongBao() {
+        let x = document.getElementById("totalNum_input").value;
+        alert("Bạn hãy nhập " + x + " phần tử");
+    }
+    let array = Array();
+    let i=0
+    function add_element_to_array() {
+        let y = document.getElementById("totalNum_input").value;
+        if (i+1 > y) {
+            alert("ban het quyen nhap tiep");
+        } else {
+            array[i] = document.getElementById("num_input").value;
+            alert("Ban vua nhap " + array[i] + " cho phan tu thu " + (i + 1));
+            i++;
+            document.getElementById("num_input").value = "";
+        }
+    }
+
+    function display_element() {
+        let i=0;
+        let w = "<hr/>";
+        while (i<array.length) {
+            w += "Phan tu thu " + (i + 1) + " la " + array[i] + "<br/>";
+            i++;
+        } document.getElementById("result").innerHTML= w;
+    }
+
+    function sum_element() {
+        let x = 0;
+        let i = 0;
+        while (i < array.length) {
+            x = x + parseInt(array[i]);
+            i++;
+        }
+        document.getElementById("result2").innerHTML = "<hr/>" + "Tong cua mang la " + x;
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hien thi so nguyen to dau tien</title>
+</head>
+<body>
+<script>
+    let number = prompt("Nhap so luong so nt can in ra");
+    let count = 0;
+    let i = 1; //N = i
+    // let n = 0;
+    let check;
+
+    while (count < number) {
+        check = true;
+
+        for (let j = 2; j < i; j++) {
+            if (i % j == 0) {
+                check = false;
+            }
+        }
+        if (check) {
+            document.write("Số nguyên tố thứ " + (count+1) + " là: " + i + "<br>");
+            count++;
+        }
+        i++;
+    }
+</script>
+</body>
+</html>
